@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ConcentrationViewController: UIViewController {
     
     // controller에서 model로 큰 초록색 화살표(MVC모델)를 만들기 위함.
     // 클래스는 모든 변수가 초기화되면, 인수가 없는 init을 자동으로 가지기 때문에 = Concentration() 으로 초기화 가능.
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     private func updateFlipCountLabel() {
         let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth : 5.0,
-            .strokeColor : #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1),
+            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
         ]
         let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributedString
@@ -48,6 +48,14 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet private var cardButtons: [UIButton]!
+    
+    var theme: String? {
+        didSet {
+            emojiChoices = theme ?? ""
+            emoji = [:]
+            updateViewFromModel()
+        }
+    }
     
     private var emojiChoices = "🦇😱🙀👿🎃👻🍭🍬🍎"
     
@@ -88,19 +96,21 @@ class ViewController: UIViewController {
     // 카드가 선택되면 게임이 변화하는데, view와 model 사이의 동기화를 해주는 것.
     // 모든 카드들을 살펴보고, 모든 cardButtons들의 짝이 맞았는지를 확인함. ex. 앞면인지.. 짝이 맞았는지.. 등
     private func updateViewFromModel() {
-        for index in cardButtons.indices {
-            
-            // button과 card가 매칭되도록 한 것. (view와 model 간의 동기화를 위해)
-            let button = cardButtons[index]
-            let card = game.cards[index]
-            if card.isFaceUp {
-                button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            }else {
-                button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        if cardButtons != nil {
+             for index in cardButtons.indices {
                 
-                
+                // button과 card가 매칭되도록 한 것. (view와 model 간의 동기화를 위해)
+                let button = cardButtons[index]
+                let card = game.cards[index]
+                if card.isFaceUp {
+                    button.setTitle(emoji(for: card), for: UIControl.State.normal)
+                    button.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+                }else {
+                    button.setTitle("", for: UIControl.State.normal)
+                    button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0, green: 0.468845427, blue: 1, alpha: 1)
+                    
+                    
+                }
             }
         }
     }

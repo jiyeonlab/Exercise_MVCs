@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90278755234C4AAE000F3B27 /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90278754234C4AAE000F3B27 /* ConcentrationThemeChooserViewController.swift */; };
 		90C6097C231626B40080122D /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6097B231626B40080122D /* Concentration.swift */; };
 		90C6097E231627AC0080122D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C6097D231627AC0080122D /* Card.swift */; };
 		90CF77EF2315071100023F35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF77EE2315071100023F35 /* AppDelegate.swift */; };
-		90CF77F12315071100023F35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF77F02315071100023F35 /* ViewController.swift */; };
+		90CF77F12315071100023F35 /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF77F02315071100023F35 /* ConcentrationViewController.swift */; };
 		90CF77F42315071100023F35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CF77F22315071100023F35 /* Main.storyboard */; };
 		90CF77F62315071200023F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CF77F52315071200023F35 /* Assets.xcassets */; };
 		90CF77F92315071200023F35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CF77F72315071200023F35 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90278754234C4AAE000F3B27 /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 		90C6097B231626B40080122D /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		90C6097D231627AC0080122D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		90CF77EB2315071100023F35 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CF77EE2315071100023F35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90CF77F02315071100023F35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90CF77F02315071100023F35 /* ConcentrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationViewController.swift; sourceTree = "<group>"; };
 		90CF77F32315071100023F35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90CF77F52315071200023F35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90CF77F82315071200023F35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,10 +60,11 @@
 		90CF77ED2315071100023F35 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
+				90278754234C4AAE000F3B27 /* ConcentrationThemeChooserViewController.swift */,
 				90C6097B231626B40080122D /* Concentration.swift */,
 				90C6097D231627AC0080122D /* Card.swift */,
 				90CF7800231508B300023F35 /* Supporting Files */,
-				90CF77F02315071100023F35 /* ViewController.swift */,
+				90CF77F02315071100023F35 /* ConcentrationViewController.swift */,
 				90CF77F22315071100023F35 /* Main.storyboard */,
 				90CF77FA2315071200023F35 /* Info.plist */,
 			);
@@ -149,7 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CF77F12315071100023F35 /* ViewController.swift in Sources */,
+				90278755234C4AAE000F3B27 /* ConcentrationThemeChooserViewController.swift in Sources */,
+				90CF77F12315071100023F35 /* ConcentrationViewController.swift in Sources */,
 				90CF77EF2315071100023F35 /* AppDelegate.swift in Sources */,
 				90C6097C231626B40080122D /* Concentration.swift in Sources */,
 				90C6097E231627AC0080122D /* Card.swift in Sources */,
