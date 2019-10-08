@@ -17,6 +17,12 @@ class ConcentrationThemeChooserViewController: UIViewController {
         "Animals": "🐱🐸🐯🐵🐥🐺🐝🐨🐶🦉"
     ]
     
+    // 코드에서 segue를 만들기 위한 action 추가.
+    // Sports, Faces, Animals 전부 여기로 연결됨.
+    @IBAction func changeTheme(_ sender: Any) {
+        performSegue(withIdentifier: "Choose Theme", sender: sender)
+    }
+    
     // 새로운  MVC를 준비하는 함수.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Choose Theme" {
